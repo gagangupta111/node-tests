@@ -77,3 +77,14 @@ it('test setName function', () => {
     }, "Should include name properties also");
 
 });
+
+it('Should add Async 2 numbrs', (done) => {
+    const res = utils.addAsync(3,2, (res) => {
+        
+        expect(res).toExist('Should Exist!');
+        expect(res).toEqual(5).toBeA('number');
+        done();
+    });
+
+});
+

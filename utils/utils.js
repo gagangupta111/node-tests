@@ -16,3 +16,10 @@ module.exports.setName = (user, names) => {
 
     return user;
 }
+
+module.exports.addAsync = (a,b, callback) => {
+    setTimeout(() => {
+        callback( a + b );
+    }, 1000);
+
+};
