@@ -8,7 +8,7 @@ it('Should add 2 numbrs', () => {
     expect(res).toExist('Should Exist!');
     expect(res).toEqual(5).toBeA('number');
 
-})
+});
 
 it('Should sub 2 numbrs', () => {
     const res = utils.sub(3,2);
@@ -80,7 +80,7 @@ it('test setName function', () => {
 
 it('Should add Async 2 numbrs', (done) => {
     const res = utils.addAsync(3,2, (res) => {
-        
+
         expect(res).toExist('Should Exist!');
         expect(res).toEqual(5).toBeA('number');
         done();
@@ -88,3 +88,17 @@ it('Should add Async 2 numbrs', (done) => {
 
 });
 
+it('test square of a number', () => {
+
+    expect(utils.square(7)).toExist().toBeA('number').toBe(49);
+
+});
+
+it('test Async square of a number', (done) => {
+
+    utils.squareAsync(9, (res) => {
+        expect(res).toExist().toBeA('number').toBe(81);
+        done();
+    });
+
+});

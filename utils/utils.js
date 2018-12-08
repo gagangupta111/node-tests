@@ -23,3 +23,16 @@ module.exports.addAsync = (a,b, callback) => {
     }, 1000);
 
 };
+
+const square = (a) => a*a;
+
+const squareAsync = (a, callback) => {
+
+    setTimeout(() => {
+        callback(a*a);
+    }, 1000);
+
+};
+
+module.exports.square = square;
+module.exports.squareAsync = squareAsync;
