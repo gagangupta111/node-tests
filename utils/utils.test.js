@@ -16,4 +16,14 @@ it('Should sub 2 numbrs', () => {
         throw new Error(`Expected 1 but got ${res}`);
     }
     
+});
+
+
+it('Should sub 2 numbrs and return ', () => {
+    const res = utils.returnSub(3,2);
+
+    if(res != 1){
+        throw new Error(`Expected 1 but got ${res}`);
+    }
+    
 })
